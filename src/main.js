@@ -1,13 +1,13 @@
-// import { createApp } from 'vue'
-// import App from './App.vue'
-// import router from './router'
-// // import Vuelidate from 'vuelidate'
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+// import Vuelidate from 'vuelidate'
 
 
-// const app = createApp(App)
+const app = createApp(App)
 
-// app.use(router)
+app.use(router)
 
-// // app.use(Vuelidate)
+// app.use(Vuelidate)
 
-// app.mount('#app')
+app.mount('#app')

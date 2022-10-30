@@ -1,17 +1,12 @@
 <script setup>
-import Purple_button from './components/purple_button.vue';
-import Full_card from './components/full_card.vue';
-
 
 </script>
 
 <template>
   <div>
-    <Purple_button>edit</Purple_button>
-    <Full_card></Full_card>
+    <router-view>
+    </router-view>
   </div>
-
-
 </template>
 
 <style>
