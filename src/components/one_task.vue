@@ -1,6 +1,6 @@
 <template>
     <div class="task">
-        <p>Some text</p>
+        <Custom_check></Custom_check>
         <p>21.10.2022 14:30</p>
         <div class="buttons">
             <Purple_button>Edit</Purple_button>
@@ -12,8 +12,9 @@
 
 <script>
 import Purple_button from './purple_button.vue';
+import Custom_check from './custom_check.vue';
 export default {
-    components: { Purple_button }
+    components: { Purple_button, Custom_check }
 }
 </script>
 

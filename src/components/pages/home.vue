@@ -19,7 +19,7 @@ export default {
     }
   },
   mounted(){
-    axios.get('http://192.168.15.61:54321/').then(response => {console.log(response)})
+    axios.get('http://127.0.0.1:54321/').then(response => {console.log(response)})
   }
 }
 </script>
