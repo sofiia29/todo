@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button>{{txt}}</button>
+        <button><slot></slot></button>
     </div>
 </template>
 
@@ -15,8 +15,10 @@ export default {
 
 <style scoped>
     button{
-        width: 95px;
-        height: 30px;
+        font-family: 'Amatic SC';
+        /* width: 95px;
+        height: 30px; */
+        padding: 3px 20px;
         background: #E2BDF3;
         border-radius: 30px;
         font-style: normal;
@@ -25,5 +27,6 @@ export default {
         line-height: 38px;
         color: white;
         text-align: center;
+        border: none;
     }
 </style>

@@ -1,22 +1,31 @@
 <template>
-  <div>
-    <Purple_button>edit</Purple_button>
+  <div class="container">
     <Full_card></Full_card>
   </div>
 </template>
 
 <script>
-import Purple_button from './../purple_button.vue';
 import Full_card from './../full_card.vue';
+import axios from 'axios';
+
 export default {
   name: "home",
   components:{
-    Purple_button,
-    Full_card
+    Full_card,
+},
+  data(){
+    return{
+      file: null,
+    }
+  },
+  mounted(){
+    axios.get('http://192.168.15.61:54321/').then(response => {console.log(response)})
   }
 }
 </script>
 
 <style scoped>
-
+  .container{
+    width: 1200px;
+  }
 </style>
