@@ -23,4 +23,12 @@ body {
   width: 1200px;
   margin: auto;
 }
+
+@media(max-width: 700px){
+  .container{
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+}
 </style>

@@ -25,7 +25,5 @@ export default {
 </script>
 
 <style scoped>
-  .container{
-    width: 1200px;
-  }
+  
 </style>

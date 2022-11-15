@@ -1,6 +1,6 @@
 <template>
     <div class="inpt">
-        <input placeholder="things you want to do today?">
+        <input placeholder="what do you want to do?">
         <img src="./../assets/images/plus.svg">
     </div>
 </template>
@@ -38,5 +38,13 @@ export default {
 
     input:focus{
         outline: none;
+    }
+
+    @media(max-width: 700px){
+        .inpt{
+            width: 100%;
+        }
+
+
     }
 </style>

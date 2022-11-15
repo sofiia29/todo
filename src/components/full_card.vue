@@ -21,8 +21,8 @@ export default {
 <style scoped>
     .backgr{
         background-color: #A360C2;
-        width: 1166px;
-        height: 832px;
+        box-sizing: border-box;
+        width: 100%;
         border-radius: 50px;
         padding: 60px;
         margin-top: 95px;
@@ -37,5 +37,16 @@ export default {
         color: white;
         margin: 0;
         margin-bottom: 40px;
+    }
+
+    @media(max-width: 700px){
+        h1{
+            text-align: center;
+        }
+
+        .backgr{
+            align-items: center;
+        }
+        
     }
 </style>

@@ -42,4 +42,11 @@ export default {
         flex-direction: row;
         gap: 60px;
     }
+
+    @media(max-width: 700px){
+        .task{
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
 </style>

@@ -40,7 +40,8 @@ export default {
 
     input:checked+.custom{
         background-image: url(./../assets/images/check.svg);
-        background-size: cover;
+        background-size: 105% 105%;
+        background-position: center;
     }
 
     label{
