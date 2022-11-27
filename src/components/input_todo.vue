@@ -1,13 +1,31 @@
 <template>
     <div class="inpt">
-        <input placeholder="what do you want to do?">
-        <img src="./../assets/images/plus.svg">
+        <input :placeholder="placeholder" :class="{'is-icon':isIcon}" :value="value" @input="$emit('input', $event.target.value)">
+        <img v-if="isIcon" src="./../assets/images/plus.svg">
     </div>
 </template>
 
 <script>
 export default {
     name: "input_todo",
+    props:{
+        isIcon: {
+            type: Boolean,
+            default: false,
+        },
+        placeholder: String,
+        value: String,
+    },
+    data(){
+        return{
+            content: this.value,
+        }
+    },
+    methods:{
+        handleInput (e) {
+            this.$emit('input', this.content)
+        }
+    }
 }
 </script>
 
@@ -22,6 +40,7 @@ export default {
         justify-content: space-between;
         width: 482px;
         padding: 7px 17px;
+        box-sizing: border-box;
         margin-bottom: 60px;
     }
 

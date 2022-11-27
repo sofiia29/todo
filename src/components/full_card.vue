@@ -1,20 +1,45 @@
 <template>
     <div class="backgr">
         <h1>To Do List:</h1>
-        <Input_todo></Input_todo>
-        <One_task></One_task>
+        <Input_todo placeholder="what do you want to do?" isIcon="true"></Input_todo>
+        <Input_todo placeholder="search" v-model="searchRequest"></Input_todo>
+        {{searchRequest}}
+        <div v-for="item in todos" v-bind:key="item.id">
+            <One_task :item="item"></One_task>
+        </div>
+        
     </div>
 </template>
 
 <script>
 import Input_todo from './../components/input_todo.vue';
 import One_task from './one_task.vue';
+import axios from 'axios';
 export default {
     name: "full_card",
     components:{
     Input_todo,
     One_task
-}
+}, 
+    data(){
+        return{
+            file: null,
+            todos: null,
+            searchRequest: "some txt",
+        }
+    },
+    methods:{
+        forSearch(todos){
+            let result = todos.filter(todo => todo.name.includes('t'));
+            console.log(result);
+        }
+    },
+    mounted(){
+    axios.get('http://127.0.0.1:54321/').then(response => {
+        console.log(response)
+        this.todos = response.data
+        this.forSearch(this.todos)})
+    }
 }
 </script>
 
@@ -46,6 +71,8 @@ export default {
 
         .backgr{
             align-items: center;
+            width: auto;
+            margin: 20px;
         }
         
     }

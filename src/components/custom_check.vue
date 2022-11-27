@@ -3,7 +3,7 @@
         <label class="container">
             <input type="checkbox" id="check" name="check">
             <span class="custom"></span>
-            Some text
+            {{name}}
         </label>
     </div>
 </template>
@@ -11,7 +11,12 @@
 <script>
 export default {
     name: "custom_check",
-
+    props: {
+        name:{
+            type: String,
+            required: true,
+        }
+    }
 }
 </script>
 
